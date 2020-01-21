@@ -14,6 +14,17 @@ public class BookDTO {
     private LocalDate creationDate;
     private LocalDate updateDate;
 
+    public BookDTO(int authorId, String title, int isbn, LocalDate publication, double score, int numScores, LocalDate creationDate, LocalDate updateDate) {
+        this.authorId = authorId;
+        this.title = title;
+        this.isbn = isbn;
+        this.publication = publication;
+        this.score = score;
+        this.numScores = numScores;
+        this.creationDate = creationDate;
+        this.updateDate = updateDate;
+    }
+
     public BookDTO(Book book) {
         this.authorId = book.getAuthorId();
         this.title = book.getTitle();

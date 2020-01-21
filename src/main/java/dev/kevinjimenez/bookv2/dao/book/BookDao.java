@@ -11,7 +11,7 @@ public interface BookDao {
 
     public void update(BookDTO bookDTO);
 
-    public void inset(BookDTO bookDTO);
+    public void insert(BookDTO bookDTO);
 
     public void delete(BookDTO bookDTO);
 }

@@ -35,7 +35,7 @@ public class BookDaoImpl implements BookDao {
     }
 
     @Override
-    public void inset(BookDTO bookDTO) {
+    public void insert(BookDTO bookDTO) {
         this.books.put(bookDTO.getIsbn(), bookDTO);
     }
 

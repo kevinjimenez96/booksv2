@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import dev.kevinjimenez.bookv2.dto.BookDTO;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Book {
     private int isbn;
@@ -15,6 +16,14 @@ public class Book {
 
     public Book(){
 
+    }
+
+    public Book(int isbn, int authorId, String title, LocalDate publication, double score) {
+        this.isbn = isbn;
+        this.authorId = authorId;
+        this.title = title;
+        this.publication = publication;
+        this.score = score;
     }
 
     public Book(BookDTO bookDTO) {
@@ -63,5 +72,22 @@ public class Book {
 
     public void setScore(double calification) {
         this.score = calification;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return getIsbn() == book.getIsbn() &&
+                getAuthorId() == book.getAuthorId() &&
+                Double.compare(book.getScore(), getScore()) == 0 &&
+                Objects.equals(getTitle(), book.getTitle()) &&
+                Objects.equals(getPublication(), book.getPublication());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIsbn(), getAuthorId(), getTitle(), getPublication(), getScore());
     }
 }

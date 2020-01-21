@@ -50,7 +50,7 @@ public class AuthorServiceTest {
     }
 
     @Test
-    public void test_FindAuthorReturnUser(){
+    public void test_FindAuthorReturnAuthor(){
         AuthorDTO authorDTO = new AuthorDTO(1 , "Kev", LocalDate.of(2020, 1, 21),
                 null, 0.0, null, null, null);
 
