@@ -1,8 +1,6 @@
 package dev.kevinjimenez.bookv2.service;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import dev.kevinjimenez.bookv2.dao.book.BookDao;
-import dev.kevinjimenez.bookv2.dto.AuthorDTO;
 import dev.kevinjimenez.bookv2.dto.BookDTO;
 import dev.kevinjimenez.bookv2.exception.ExistingValueException;
 import dev.kevinjimenez.bookv2.exception.ValueNotFoundException;
